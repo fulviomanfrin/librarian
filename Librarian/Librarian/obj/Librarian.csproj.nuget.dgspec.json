@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dev\\backend\\Librarian\\Librarian\\Librarian\\Librarian.csproj": {}
+    "D:\\dev\\Librarian\\librarian\\Librarian\\Librarian\\Librarian.csproj": {}
   },
   "projects": {
-    "D:\\dev\\backend\\Librarian\\Librarian\\Librarian\\Librarian.csproj": {
+    "D:\\dev\\Librarian\\librarian\\Librarian\\Librarian\\Librarian.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dev\\backend\\Librarian\\Librarian\\Librarian\\Librarian.csproj",
+        "projectUniqueName": "D:\\dev\\Librarian\\librarian\\Librarian\\Librarian\\Librarian.csproj",
         "projectName": "Librarian",
-        "projectPath": "D:\\dev\\backend\\Librarian\\Librarian\\Librarian\\Librarian.csproj",
+        "projectPath": "D:\\dev\\Librarian\\librarian\\Librarian\\Librarian\\Librarian.csproj",
         "packagesPath": "C:\\Users\\fulvi\\.nuget\\packages\\",
-        "outputPath": "D:\\dev\\backend\\Librarian\\Librarian\\Librarian\\obj\\",
+        "outputPath": "D:\\dev\\Librarian\\librarian\\Librarian\\Librarian\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\fulvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,24 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "MySql.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[1.4.0-beta.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
