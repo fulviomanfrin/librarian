@@ -1,44 +1,52 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Mvc;
+using Librarian.Data;
+using Librarian.Models;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Librarian.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
     public class BookController : Controller
+
+        
     {
-        // GET: BookController
+        private BookContext _context;
+      
+        public BookController(BookContext context)
+        {
+            _context = context;
+        }
+        
+
         [HttpGet]
-        public ActionResult GetBooks()
+        public ActionResult Get()
         {
-            return View();
+            return Ok(_context.Books);
         }
 
-        // GET: BookController/Details/5
+        
         [HttpGet("{id}")]
-        public ActionResult GetBook()
+        public ActionResult GetBiId(int id)
         {
-            return View();
+            Book book = _context.Books.FirstOrDefault(book => book.Id == id);
+            if(book != null)
+            {
+                return Ok(book);
+            }
+            return NotFound();
         }
 
-        // GET: BookController/Create
-        public ActionResult Create()
+       [HttpPost]
+        public ActionResult Create([FromBody] Book book)
         {
-            return View();
+            _context.Books.Add(book);
+            _context.SaveChanges();
+            return Ok();
         }
 
-        // POST: BookController/Create
         
-
-        // GET: BookController/Edit/5
-        
-
-       
-
+        //TODO DELETE
         // GET: BookController/Delete/5
         public ActionResult Delete(int id)
         {

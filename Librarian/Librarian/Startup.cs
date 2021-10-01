@@ -1,18 +1,12 @@
 using Librarian.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Rewrite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Librarian
 {
@@ -34,7 +28,13 @@ namespace Librarian
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Librarian", Version = "v1" });
             });
+            
+            //Dependency injection
+            
+
         }
+
+        
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -52,6 +52,12 @@ namespace Librarian
             app.UseSwagger();
 
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Librarian v1"));
+
+            var option = new RewriteOptions();
+
+            option.AddRedirect("^$", "swagger");
+
+            app.UseRewriter(option);
 
             app.UseAuthorization();
 
