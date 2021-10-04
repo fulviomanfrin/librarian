@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Domain.Models.Base;
 
-namespace Librarian.Models
+namespace Domain.Models
 {
-    public class Book
+    public class Book : BaseEntity
     {
         [Key]
         [Required]

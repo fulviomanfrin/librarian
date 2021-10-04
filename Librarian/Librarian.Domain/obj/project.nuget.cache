@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8fOVlSo4tUZBuwQbROiyIxH72asmu5kyAApeSCLu1gi53Rl+L6BkqM+HiFLeE+aO5STgwla5XyU72pMnL1wOvQ==",
+  "dgSpecHash": "OERkE8tz8uk4dmJ3cOwOIKYNXv+UHz6EgkI3ws+ci8OuyCmHQflkYS15yWmnOiyvbYCEQjVT5g63ChhTQTOHfA==",
   "success": true,
-  "projectFilePath": "D:\\dev\\Librarian\\librarian\\Librarian\\Librarian.Domain\\Librarian.Domain.csproj",
+  "projectFilePath": "D:\\dev\\Librarian\\librarian\\Librarian\\Librarian.Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

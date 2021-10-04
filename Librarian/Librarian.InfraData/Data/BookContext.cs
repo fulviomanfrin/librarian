@@ -5,11 +5,6 @@ namespace Librarian.Data
 {
     public class BookContext : DbContext
     {
-        public BookContext()
-        {
-
-        }
-        
         public BookContext(DbContextOptions<BookContext> opt) : base (opt)
         {
 

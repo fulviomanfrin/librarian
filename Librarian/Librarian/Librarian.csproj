@@ -15,4 +15,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Librarian.Domain\Domain.csproj" />
+    <ProjectReference Include="..\Librarian.InfraData\InfraData.csproj" />
+  </ItemGroup>
+
 </Project>

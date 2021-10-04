@@ -1,3 +1,5 @@
+using InfraData.Repository;
+using InfraData.Repository.Generic;
 using Librarian.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -28,9 +30,11 @@ namespace Librarian
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Librarian", Version = "v1" });
             });
-            
+
             //Dependency injection
-            
+
+            services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
+
 
         }
 
