@@ -3,11 +3,11 @@ using Domain.Models.Base;
 
 namespace Domain.Models
 {
-    public class Book : BaseEntity
+    public class Book
     {
         [Key]
         [Required]
-        public new int Id { get; set; }
+        public long Id { get; set; }
         [Required]
         public string Title { get; set; }
         [Required]

@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Librarian.Data;
 using Domain.Models;
-using System.Linq;
-using InfraData.Repository.Generic;
+using InfraData.Repository;
 
 namespace Librarian.Controllers
 {
@@ -12,9 +10,9 @@ namespace Librarian.Controllers
 
         
     {
-        private GenericRepository<Book> _repository;
+        private IBookRepository _repository;
       
-        public BookController(GenericRepository<Book> repository)
+        public BookController(IBookRepository repository)
         {
             _repository = repository;
         }
@@ -28,33 +26,37 @@ namespace Librarian.Controllers
 
         
         [HttpGet("{id}")]
-        public ActionResult GetBiId(int id)
+        public ActionResult Get(long id)
         {
-            Book book = _context.Books.FirstOrDefault(book => book.Id == id);
-            if(book != null)
-            {
-                return Ok(book);
-            }
-            return NotFound();
+            var book = _repository.FindById(id);
+            if (book == null) return NotFound();
+            return Ok(book);
         }
 
-       [HttpPost]
-        public ActionResult Create([FromBody] Book book)
+        [HttpPost]
+        public ActionResult Post([FromBody] Book book)
         {
-            _context.Books.Add(book);
-            _context.SaveChanges();
-            return Ok();
+            if (book == null) return BadRequest();
+            return Ok(_repository.Create(book));
+        }
+
+
+        [HttpPut]
+        public ActionResult Put([FromBody] Book book)
+        {
+            if (book == null) return BadRequest();
+            return Ok(_repository.Update(book));
+        }
+
+
+        [HttpDelete("{id}")]
+        public ActionResult Delete(long id)
+        {
+            _repository.Delete(id);
+            return NoContent();
         }
 
         
-        //TODO DELETE
-        // GET: BookController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
 
-        // POST: BookController/Delete/5
-        
     }
 }

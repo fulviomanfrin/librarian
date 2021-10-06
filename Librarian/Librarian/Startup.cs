@@ -1,6 +1,5 @@
 using InfraData.Repository;
 using InfraData.Repository.Generic;
-using Librarian.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Rewrite;
@@ -25,7 +24,7 @@ namespace Librarian
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<MySQLContext>(opts => opts.UseMySQL(Configuration.GetConnectionString("MyDbConnection")));
+            services.AddDbContext<MySQLContext>(opts => opts.UseMySQL(Configuration.GetConnectionString("MySQLConnection")));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -34,9 +33,10 @@ namespace Librarian
 
             //Dependency injection
 
-            services.AddScoped<IBookRepository, BookRepository>();
 
-            services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
+
+            //services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<IBookRepository, BookRepository>();
 
 
         }

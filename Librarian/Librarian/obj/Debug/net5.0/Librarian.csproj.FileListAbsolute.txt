@@ -35,7 +35,6 @@ D:\dev\Librarian\librarian\Librarian\Librarian\obj\Debug\net5.0\Librarian.Genera
 D:\dev\Librarian\librarian\Librarian\Librarian\obj\Debug\net5.0\Librarian.AssemblyInfoInputs.cache
 D:\dev\Librarian\librarian\Librarian\Librarian\obj\Debug\net5.0\Librarian.AssemblyInfo.cs
 D:\dev\Librarian\librarian\Librarian\Librarian\obj\Debug\net5.0\Librarian.csproj.CoreCompileInputs.cache
-D:\dev\Librarian\librarian\Librarian\Librarian\obj\Debug\net5.0\Librarian.MvcApplicationPartsAssemblyInfo.cs
 D:\dev\Librarian\librarian\Librarian\Librarian\obj\Debug\net5.0\Librarian.MvcApplicationPartsAssemblyInfo.cache
 D:\dev\Librarian\librarian\Librarian\Librarian\obj\Debug\net5.0\staticwebassets\Librarian.StaticWebAssets.Manifest.cache
 D:\dev\Librarian\librarian\Librarian\Librarian\obj\Debug\net5.0\staticwebassets\Librarian.StaticWebAssets.xml
@@ -47,3 +46,7 @@ D:\dev\Librarian\librarian\Librarian\Librarian\obj\Debug\net5.0\ref\Librarian.dl
 D:\dev\Librarian\librarian\Librarian\Librarian\obj\Debug\net5.0\Librarian.pdb
 D:\dev\Librarian\librarian\Librarian\Librarian\obj\Debug\net5.0\Librarian.genruntimeconfig.cache
 D:\dev\Librarian\librarian\Librarian\Librarian\bin\Debug\net5.0\MySqlConnector.dll
+D:\dev\Librarian\librarian\Librarian\Librarian\bin\Debug\net5.0\Domain.dll
+D:\dev\Librarian\librarian\Librarian\Librarian\bin\Debug\net5.0\InfraData.dll
+D:\dev\Librarian\librarian\Librarian\Librarian\bin\Debug\net5.0\InfraData.pdb
+D:\dev\Librarian\librarian\Librarian\Librarian\bin\Debug\net5.0\Domain.pdb

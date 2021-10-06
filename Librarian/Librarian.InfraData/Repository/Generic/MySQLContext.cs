@@ -1,7 +1,7 @@
 ﻿using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Librarian.Data
+namespace InfraData.Repository.Generic
 {
     public class MySQLContext : DbContext
     {
