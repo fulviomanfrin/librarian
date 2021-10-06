@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Librarian.Domain\Domain.csproj" />
     <ProjectReference Include="..\Librarian.InfraData\InfraData.csproj" />
   </ItemGroup>
 

@@ -2,6 +2,7 @@
 using Librarian.Data;
 using Domain.Models;
 using System.Linq;
+using InfraData.Repository.Generic;
 
 namespace Librarian.Controllers
 {
@@ -11,18 +12,18 @@ namespace Librarian.Controllers
 
         
     {
-        private BookContext _context;
+        private GenericRepository<Book> _repository;
       
-        public BookController(BookContext context)
+        public BookController(GenericRepository<Book> repository)
         {
-            _context = context;
+            _repository = repository;
         }
         
 
         [HttpGet]
         public ActionResult Get()
         {
-            return Ok(_context.Books);
+            return Ok(_repository.FindAll());
         }
 
         

@@ -3,14 +3,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Librarian.Data
 {
-    public class BookContext : DbContext
+    public class MySQLContext : DbContext
     {
-        public BookContext()
+        public MySQLContext()
         {
 
         }
         
-        public BookContext(DbContextOptions<BookContext> opt) : base (opt)
+        public MySQLContext(DbContextOptions<MySQLContext> opt) : base (opt)
         {
 
         }

@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 
+
 namespace Librarian
 {
     public class Startup
@@ -24,7 +25,7 @@ namespace Librarian
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<BookContext>(opts => opts.UseMySQL(Configuration.GetConnectionString("BookConnection")));
+            services.AddDbContext<MySQLContext>(opts => opts.UseMySQL(Configuration.GetConnectionString("MyDbConnection")));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -32,6 +33,8 @@ namespace Librarian
             });
 
             //Dependency injection
+
+            services.AddScoped<IBookRepository, BookRepository>();
 
             services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
 

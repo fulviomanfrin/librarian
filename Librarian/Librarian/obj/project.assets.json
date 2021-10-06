@@ -1863,7 +1863,6 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Domain >= 1.0.0",
       "InfraData >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.5",
@@ -1899,9 +1898,6 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\dev\\Librarian\\librarian\\Librarian\\Librarian.Domain\\Domain.csproj": {
-              "projectPath": "D:\\dev\\Librarian\\librarian\\Librarian\\Librarian.Domain\\Domain.csproj"
-            },
             "D:\\dev\\Librarian\\librarian\\Librarian\\Librarian.InfraData\\InfraData.csproj": {
               "projectPath": "D:\\dev\\Librarian\\librarian\\Librarian\\Librarian.InfraData\\InfraData.csproj"
             }

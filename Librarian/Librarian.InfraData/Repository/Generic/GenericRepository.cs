@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using Domain.Models.Base;
 using Librarian.Data;
+using Microsoft.EntityFrameworkCore;
+using InfraData.Repository.Generic;
 
 namespace InfraData.Repository.Generic
 {
     public class GenericRepository<T> : IRepository<T> where T : BaseEntity
     {
-        private BookContext _context;
+        private  MySQLContext _context;
 
         private DbSet<T> dataset;
 
-        public GenericRepository(BookContext context)
+        public GenericRepository(MySQLContext context)
         {
             _context = context;
             dataset = _context.Set<T>();

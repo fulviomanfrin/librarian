@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Librarian.Migrations
 {
-    [DbContext(typeof(BookContext))]
+    [DbContext(typeof(MySQLContext))]
     [Migration("20210929220934_CreateBooksDb")]
     partial class CreateBooksDb
     {
