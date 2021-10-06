@@ -1,0 +1,12 @@
+D:\dev\Librarian\librarian\Librarian\Librarian.Domain\bin\Debug\net5.0\Domain.deps.json
+D:\dev\Librarian\librarian\Librarian\Librarian.Domain\bin\Debug\net5.0\Domain.dll
+D:\dev\Librarian\librarian\Librarian\Librarian.Domain\bin\Debug\net5.0\ref\Domain.dll
+D:\dev\Librarian\librarian\Librarian\Librarian.Domain\bin\Debug\net5.0\Domain.pdb
+D:\dev\Librarian\librarian\Librarian\Librarian.Domain\obj\Debug\net5.0\Domain.csproj.AssemblyReference.cache
+D:\dev\Librarian\librarian\Librarian\Librarian.Domain\obj\Debug\net5.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\dev\Librarian\librarian\Librarian\Librarian.Domain\obj\Debug\net5.0\Domain.AssemblyInfoInputs.cache
+D:\dev\Librarian\librarian\Librarian\Librarian.Domain\obj\Debug\net5.0\Domain.AssemblyInfo.cs
+D:\dev\Librarian\librarian\Librarian\Librarian.Domain\obj\Debug\net5.0\Domain.csproj.CoreCompileInputs.cache
+D:\dev\Librarian\librarian\Librarian\Librarian.Domain\obj\Debug\net5.0\Domain.dll
+D:\dev\Librarian\librarian\Librarian\Librarian.Domain\obj\Debug\net5.0\ref\Domain.dll
+D:\dev\Librarian\librarian\Librarian\Librarian.Domain\obj\Debug\net5.0\Domain.pdb

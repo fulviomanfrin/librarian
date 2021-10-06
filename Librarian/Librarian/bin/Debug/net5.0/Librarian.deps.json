@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "Librarian/1.0.0": {
         "dependencies": {
+          "InfraData": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.5",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.5",
           "MySql.EntityFrameworkCore": "5.0.3",
@@ -725,6 +726,28 @@
       "System.Windows.Extensions/4.7.0": {
         "dependencies": {
           "System.Drawing.Common": "4.7.0"
+        }
+      },
+      "Domain/1.0.0": {
+        "runtime": {
+          "Domain.dll": {}
+        },
+        "compile": {
+          "Domain.dll": {}
+        }
+      },
+      "InfraData/1.0.0": {
+        "dependencies": {
+          "Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.5",
+          "MySql.EntityFrameworkCore": "5.0.3",
+          "MySqlConnector": "1.4.0-beta.3"
+        },
+        "runtime": {
+          "InfraData.dll": {}
+        },
+        "compile": {
+          "InfraData.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -2749,6 +2772,16 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InfraData/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
       "type": "referenceassembly",

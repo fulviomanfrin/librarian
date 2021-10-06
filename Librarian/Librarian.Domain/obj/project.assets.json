@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\dev\\Librarian\\librarian\\Librarian\\Librarian.Domain\\Librarian.Domain.csproj",
-      "projectName": "Librarian.Domain",
-      "projectPath": "D:\\dev\\Librarian\\librarian\\Librarian\\Librarian.Domain\\Librarian.Domain.csproj",
+      "projectUniqueName": "D:\\dev\\Librarian\\librarian\\Librarian\\Librarian.Domain\\Domain.csproj",
+      "projectName": "Domain",
+      "projectPath": "D:\\dev\\Librarian\\librarian\\Librarian\\Librarian.Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\fulvi\\.nuget\\packages\\",
       "outputPath": "D:\\dev\\Librarian\\librarian\\Librarian\\Librarian.Domain\\obj\\",
       "projectStyle": "PackageReference",

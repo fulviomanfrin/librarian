@@ -1,4 +1,5 @@
-using Librarian.Data;
+using InfraData.Repository;
+using InfraData.Repository.Generic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Rewrite;
@@ -7,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+
 
 namespace Librarian
 {
@@ -22,15 +24,20 @@ namespace Librarian
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<BookContext>(opts => opts.UseMySQL(Configuration.GetConnectionString("BookConnection")));
+            services.AddDbContext<MySQLContext>(opts => opts.UseMySQL(Configuration.GetConnectionString("MySQLConnection")));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Librarian", Version = "v1" });
             });
-            
+
             //Dependency injection
-            
+
+
+
+            //services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<IBookRepository, BookRepository>();
+
 
         }
 

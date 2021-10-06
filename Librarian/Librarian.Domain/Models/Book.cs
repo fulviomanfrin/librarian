@@ -1,12 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Domain.Models.Base;
 
-namespace Librarian.Models
+namespace Domain.Models
 {
     public class Book
     {
         [Key]
         [Required]
-        public int Id { get; set; }
+        public long Id { get; set; }
         [Required]
         public string Title { get; set; }
         [Required]

@@ -602,6 +602,32 @@
             "rid": "win"
           }
         }
+      },
+      "Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.dll": {}
+        }
+      },
+      "InfraData/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.5",
+          "MySql.EntityFrameworkCore": "5.0.3",
+          "MySqlConnector": "1.4.0-beta.3"
+        },
+        "compile": {
+          "bin/placeholder/InfraData.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InfraData.dll": {}
+        }
       }
     }
   },
@@ -1823,10 +1849,21 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Domain/1.0.0": {
+      "type": "project",
+      "path": "../Librarian.Domain/Domain.csproj",
+      "msbuildProject": "../Librarian.Domain/Domain.csproj"
+    },
+    "InfraData/1.0.0": {
+      "type": "project",
+      "path": "../Librarian.InfraData/InfraData.csproj",
+      "msbuildProject": "../Librarian.InfraData/InfraData.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "InfraData >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.5",
       "MySql.EntityFrameworkCore >= 5.0.3",
@@ -1860,7 +1897,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\dev\\Librarian\\librarian\\Librarian\\Librarian.InfraData\\InfraData.csproj": {
+              "projectPath": "D:\\dev\\Librarian\\librarian\\Librarian\\Librarian.InfraData\\InfraData.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
