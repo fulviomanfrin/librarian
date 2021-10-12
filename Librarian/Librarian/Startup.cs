@@ -33,10 +33,10 @@ namespace Librarian
 
             //Dependency injection
 
-
-
-            //services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<MySQLContext, MySQLContext>();
             services.AddScoped<IBookRepository, BookRepository>();
+            services.AddTransient(typeof(IRepository<>), typeof(GenericRepository<>));
+            
 
 
         }

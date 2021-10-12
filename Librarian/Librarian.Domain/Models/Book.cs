@@ -1,13 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Domain.Models.Base;
+﻿using Domain.Models.Base;
+using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Models
 {
-    public class Book
+    public class Book : BaseEntity
     {
-        [Key]
-        [Required]
-        public long Id { get; set; }
+        
         [Required]
         public string Title { get; set; }
         [Required]

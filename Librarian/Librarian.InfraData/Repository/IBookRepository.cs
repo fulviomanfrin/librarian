@@ -1,4 +1,5 @@
 ﻿using Domain.Models;
+using InfraData.Repository.Generic;
 using System.Collections.Generic;
 
 namespace InfraData.Repository
