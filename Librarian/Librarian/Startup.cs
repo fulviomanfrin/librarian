@@ -21,7 +21,7 @@ namespace Librarian
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<MySQLContext>(opts => opts.UseMySQL(Configuration.GetConnectionString("MySQLConnection")));
@@ -32,18 +32,13 @@ namespace Librarian
             });
 
             //Dependency injection
-
-            services.AddScoped<MySQLContext, MySQLContext>();
+                        
             services.AddScoped<IBookRepository, BookRepository>();
             services.AddTransient(typeof(IRepository<>), typeof(GenericRepository<>));
-            
 
-
-        }
+        }   
 
         
-
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
