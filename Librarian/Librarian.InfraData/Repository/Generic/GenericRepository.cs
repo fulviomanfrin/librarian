@@ -47,14 +47,13 @@ namespace InfraData.Repository.Generic
         {
 
             if (!Exists(item.Id)) return null;
-
-            // Get the current status of the record in the database
+            
             var result = dataset.SingleOrDefault(p => p.Id.Equals(item.Id));
             if (result != null)
             {
                 try
                 {
-                    // set changes and save
+                   
                     _context.Entry(result).CurrentValues.SetValues(item);
                     _context.SaveChanges();
                     return result;
