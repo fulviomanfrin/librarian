@@ -15,5 +15,7 @@ namespace Domain.Models
         public string EMail { get; private set; }
 
         public int Password { get; private set; }
+
+        public Boolean WritePrivilege { get; private set; }
     }
 }
